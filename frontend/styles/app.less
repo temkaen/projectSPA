@@ -1,0 +1,195 @@
+@import "reset";
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+@line: solid white 1px;
+
+//@grey: #bbbaba;
+//@green: #38ac38;
+//
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Lora', sans-serif;
+}
+
+
+body, html {
+  background: url("/img/background.jpg") center fixed ;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+header {
+  border-bottom:@line;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+
+  }
+}
+main {
+
+  border-bottom: @line;
+  display: flex;
+  flex-flow: column;
+  position: relative;
+
+  flex-grow: 1;
+
+}
+
+#leadName {
+  width: 200px;
+  height: 40px;
+  align-self: center;
+}
+
+
+
+footer {
+
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+
+
+.navBtn__container {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  height: 45px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+    & a:first-of-type {
+      margin-right: 5px;
+    }
+;
+
+
+}
+.button {
+  width: 180px;
+  background: lightgreen;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  font-size: 35px;
+
+}
+
+.chooseStyle, .chooseMaterials, .startPage {
+  //color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+  & h2 {
+    font-size: 20px;
+  }
+  &__container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1024px;
+    &_item {
+      width: 300px;
+      height: 300px;
+      background: white;
+      border: solid 1px black;
+      margin: 15px auto;
+      color: #000;
+      transition: all 0.2s ease;
+      &:hover {
+        border: double lightgray 2px;
+        transform: scale(1.05);
+
+      }
+      &_active {
+        background: lightgreen;
+        border: double gray 2px;
+      }
+    }
+  }
+}
+
+.insertSize {
+  form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+#selectConfig, #inputSize {
+  width: 200px;
+  height: 40px;
+  margin: 5px;
+  text-align: center;
+}
+
+.error {
+  & img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+  }
+}
+
+.insertSize {
+  & input {
+    width: 280px;
+    height: 45px;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+}
+
+.sendPage {
+  & table {
+    margin: 50px auto;
+    border: solid;
+    width: 60%;
+    background: floralwhite;
+    & tr {
+      border: solid 1px black;
+      height: 35px;
+      & td {
+        border: solid black 1px;
+      }
+      & td:last-of-type {
+        background: aqua;
+        text-align: center ;
+      }
+    }
+
+
+
+  }
+}
